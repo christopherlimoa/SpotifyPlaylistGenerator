@@ -13,10 +13,10 @@ uris = []
 # FILTERS
 limit = 10  # number of songs in playlist
 market = "US"  # country
-seed_genres = "pop,summer,happy"  # genres
+seed_genres = "study"  # genres
 target_danceability = 0.5
 valence = 0.1
-seed_artists = "7pbDxGE6nQSZVfiFdq9lOL,12j6dJrPXanCBwY599pZxf"
+seed_artists = "7pbDxGE6nQSZVfiFdq9lOL,12j6dJrPXanCBwY599pZxf,3Y7RZ31TRPVadSFVy1o8os,31SBgHxc8eqZUk9MdveH42"  # artists
 
 query = f'{endpoint_url}limit={limit}&market={market}&seed_genres={seed_genres}&target_danceability={target_danceability}&valence={valence}&seed_artists={seed_artists}'
 
@@ -34,7 +34,7 @@ for i,j in enumerate(json_response['tracks']):
     print(f"{i+1}) \"{j['name']}\" by {j['artists'][0]['name']}")
 
 # STEP 2 : CREATE PLAYLIST
-user_id = "31e2oc7hni7va5gdejenhuqrmt2m"
+user_id = "THIS_IS_YOUR_USERNAME"
 
 endpoint_url = f"https://api.spotify.com/v1/users/{user_id}/playlists"
 
